@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatAutoCompleteTextView
+        android:id="@+id/edit_city_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:drawableEnd="@drawable/ic_search_black_24dp"
+        android:hint="Search City"/>
+    
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_popular_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular Cities"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_popular_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/text_other_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other Cities"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_other_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ActivityDoctorSearch"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:rotation="225"
+            android:padding="4dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_call_made_black_24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@color/colorBlack">
+
+            <EditText
+                android:id="@+id/edit_doctor_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:padding="8dp"
+                android:inputType="textPersonName"
+                android:focusable="true"
+                android:layout_weight="1"
+                android:drawableEnd="@drawable/ic_search_black_24dp"
+                android:hint="Search"/>
+
+            <ImageView
+                android:id="@+id/cross"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="4dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_popular_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Popular Search"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_popular_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/text_other_cities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent Search"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:padding="6dp"
+                android:textSize="15sp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_recent_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
